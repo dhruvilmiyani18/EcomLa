@@ -40,8 +40,9 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
         'api' => [
-            'driver' => 'passport',
+            'driver' => 'passport', //update this line
             'provider' => 'users',
         ],
     ],
@@ -69,7 +70,7 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        
+
 
         // 'users' => [
         //     'driver' => 'database',

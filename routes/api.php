@@ -24,12 +24,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/categories', [CategoryController::class, 'index']);
 
-Route::post('/product', [ProductController::class, 'index']);
+Route::post('/login',[UserController::class, 'login']);
 
-Route::post('login',[UserController::class, 'login']);
 
-Route::controller(UserContntroller::class)->group(function () {
-
-    })->middleware('auth:api');
+Route::middleware('auth:api')->group(function () { 
+    Route::post('/categories', [CategoryController::class, 'index']);
+    Route::post('/product', [ProductController::class, 'index']);
+    
+});
