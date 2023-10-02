@@ -14,7 +14,6 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
     /**
      * Show the form for creating a new resource.
      *
